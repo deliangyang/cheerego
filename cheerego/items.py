@@ -8,7 +8,22 @@
 import scrapy
 
 
-class CheeregoItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class MessageItem(scrapy.Item):
+    username = scrapy.Field()
+    avatar = scrapy.Field()
+    message = scrapy.Field()
+    create_at = scrapy.Field()
+
+
+class EventItem(scrapy.Item):
+    title = scrapy.Field()
+    content = scrapy.Field()
+    sort = scrapy.Field()
+
+
+class AlbumItem(scrapy.Item):
+    title = scrapy.Field()
+    cover = scrapy.Field()
+    description = scrapy.Field()
+    release_time = scrapy.Field()
+    release_company = scrapy.Field()

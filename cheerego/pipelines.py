@@ -8,4 +8,5 @@
 
 class CheeregoPipeline(object):
     def process_item(self, item, spider):
+        print(spider)
         return item
