@@ -1,0 +1,27 @@
+create table `album` (
+  `id` INT AUTO_INCREMENT COMMENT '编号',
+  `title` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '名称',
+  `cover` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '封面',
+  `decription` VARCHAR(1024) NOT NULL DEFAULT '' COMMENT '描述',
+  `release_time` VARCHAR(10) NOT NULL DEFAULT '' COMMENT '发行时间',
+  `release_company` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '发行公司',
+  PRIMARY KEY (`id`)
+) ENGINE INODB CHARSET utf8mb4 COMMENT '专辑';
+
+CREATE TABLE `message` (
+  `id` INT AUTO_INCREMENT COMMENT '编号',
+  `username` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '昵称',
+  `avatar` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '头像',
+  `message` VARCHAR(1024) NOT NULL DEFAULT '' COMMENT '留言',
+  `create_at` VARCHAR(10) NOT NULL DEFAULT '' COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE INODB CHARSET utf8mb4 COMMENT '留言板';
+
+CREATE TABLE `event` (
+  `id` INT AUTO_INCREMENT COMMENT '编号',
+  `title` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` TEXT COMMENT '内容',
+  `sort` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE INODB CHARSET utf8mb4 COMMENT '事件';
+
